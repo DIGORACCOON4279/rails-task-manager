@@ -1,4 +1,4 @@
-class TassController < ApplicationController
+class TasksController < ApplicationController
 
   def show
   @restaurant = Restaurant.find(params[:id])
