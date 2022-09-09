@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   # Create
   #get "tasks/new", to: "tasks#new", as: :new
-  #post "restaurants", to: "restaurants#create"
+  #post "restaurants", to: "tasks#create"
 
   # Update
   #get "tasks/:id/edit", to: "tasks#edit"
