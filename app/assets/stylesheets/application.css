@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+ *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ }
+ body{
+  background-image: url("https://image.shutterstock.com/image-photo/on-business-card-text-my-260nw-1828605239.jpg");
+  background-color:rgba(0, 0, 0, 0.336);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+
+}
+.container{
+  width: 33%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 100px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+
+
+  margin-top: 180px;
+  background-color: rgb(207, 189, 218);
+  border-radius: 5px;
+  box-shadow: 10px 10px 40px rgb(41, 41, 41);
+
+
+}
+
+h3{
+  margin-left: 15px;
+  color: rgb(148, 142, 142);
+  font-size: 25px;
+}
