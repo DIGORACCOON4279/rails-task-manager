@@ -1,21 +1,25 @@
+<div class="container mt-5">
+  <h1>My tasks</h1>
 
+  <ul id="tasks">
+    <% @tasks.each do |task| %>
+      <li>
+        <% if task.completed? %>
+          <i class="fa-regular fa-square-check"></i>
+        <% else %>
+          <i class="fa-regular fa-square"></i>
+        <% end %>
+        <%= link_to task.title, task_path(task.id) %>
+        <%= link_to task_path(task.id), data: {turbo_method: :delete, turbo_confirm: "Delete #{task.title}?"} do %>
+          <i class="fa-regular fa-trash-can"></i>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
 
-<div class="container">
-  
+  <hr>
 
-
-  <% @tasks.each do |task| %>
-    <div class="input-group mb-3">
-
-      <div class="input-group-text">
-        <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
-        <h3><%= task.title %> : <small> <%= task.details %> </small></h3>
-
-      </div>
-
-      <!--- <input type="text" class="form-control" aria-label="Text input with checkbox">-->
-    </div>
-
+  <%= link_to new_task_path do %>
+    <i class="fa-solid fa-plus"></i> Add a new task
   <% end %>
-
 </div>
